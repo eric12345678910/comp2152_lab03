@@ -7,7 +7,24 @@ mNumLives = 12          # number of monster's lives remaining
 
 # TODO: Use list() and range() to create a list of dice values
 diceOptions = list(range(1,7))
-combatStrength = int(input("Enter your combat Strength: (Number between 1-6) "))
+
+# TODO: Use a for loop with the in keyword to iterate over the weapons array and display all available weapons
+weapons = ["Fist", "Knife", "Club", "Gun", "Bomb", "Nuclear bomb"] 
+print("Available weapons: ")
+
+i = 1
+for w in weapons:
+    print(f"{i} . {w}")
+    i += 1
+exit()
+
+
+# TODO: Ask player to enter an integer between 1-6 
+combatStrength = input("Enter your combat Strength: (Number between 1-6) ")
+if combatStrength.isnumeric():
+    combatStrength = int(combatStrength)
+else:
+    print("Error: Input must be a number")
 
 if(combatStrength < 1 or combatStrength > 6):
     print("Input must be an integer between 1-6")
@@ -16,7 +33,7 @@ else:
     if(mCombatStrength  < 1 or mCombatStrength > 6):
         print("Input must be an integer between 1-6")
     else:
-        weapons = ["Fist", "Knife", "Club", "Gun", "Bomb", "Nuclear bomb"] 
+        
 
         input("Roll the dice for your health points (Press enter)")
         healthPoints = random.choice(diceOptions)
