@@ -5,7 +5,8 @@ import random
 numLives = 10           # number of player's lives remaining
 mNumLives = 12          # number of monster's lives remaining
 
-diceOptions = [1, 2, 3, 4, 5, 6]
+# TODO: Use list() and range() to create a list of dice values
+diceOptions = list(range(1,7))
 combatStrength = int(input("Enter your combat Strength: (Number between 1-6) "))
 
 if(combatStrength < 1 or combatStrength > 6):
